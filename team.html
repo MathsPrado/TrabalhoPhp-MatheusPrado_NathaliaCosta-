@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/cssDev.css"> 
+   
+  </head>
+  <body>
+    <header class="header">
+
+      <nav class="navigation">
+    
+        <section class="logo"></section>
+    
+        <section class="navigation__icon">
+          <span class="topBar"></span>
+          <span class="middleBar"></span>
+          <span class="bottomBar"></span>
+        </section>
+
+        <ul class="navigation__ul">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="">GALLERY</a></li>
+          <li><a href="team.html">TEAM</a></li>
+          <li><a href="">CLIENT</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+    
+        <section class="navigation__social">
+          <ul class="navigation__social-ul">
+            <li>
+              <a href="" class="social-icon"></a>
+            </li>
+            <li>
+              <a href="" class="social-icon"></a>
+            </li>
+            <li>
+              <a href="" class="social-icon"></a>
+            </li>
+            <li>
+              <a href="" class="social-icon"></a>
+            </li>
+          </ul>
+        </section>
+    
+      </nav>
+
+  <div class="team-section">
+    <div class="inner-width">
+      <h1>developer!! fatec jundiai</h1>
+      <div class="pers">
+
+
+        <div class="pe">
+          <img src="css/img/nathdev.jpg" alt="">
+          <div class="p-name">Full Name</div>
+          <div class="p-des">Developer</div>
+          <div class="p-sm">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="pe">
+          <img src="css/img/matdev.jpg" alt="">
+          <div class="p-name">Matheus Prado de Lima</div>
+          <div class="p-des">Developer</div>
+          <div class="p-sm">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+  
+  </header>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+      
+          
+     
+       $(function() {
+     $(".navigation__icon").click(function() {
+       $(".navigation").toggleClass('navigation-open');
+     });
+   });
+    
+                 
+      </script>
+  </body>
+</html>

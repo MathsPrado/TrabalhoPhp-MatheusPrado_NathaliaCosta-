@@ -117,8 +117,8 @@
 		<p>Sobrenome: <?php echo $sobrenome; ?></p>
 	<p>Sexo: <?php echo $sexo; ?></p>
 		<p>Senha: <?php echo $senha; ?></p>
-		<p>Ingresso escolhido: <?php echo $check1; ?></p>
-		<p>Ingresso escolhido: <?php echo $check2; ?></p>
+		<p> escolhido: <?php echo $check1; ?></p>
+		<p> escolhido: <?php echo $check2; ?></p>
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>

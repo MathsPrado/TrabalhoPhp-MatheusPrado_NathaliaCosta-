@@ -37,9 +37,9 @@
 
 	<ul class="navigation__ul">
 	  <li><a href="index.html">HOME</a></li>
-	  <li><a href="orcamento.html">ORÇAMENTO</a></li>
+	  <li><a href="orcamento.php">ORÇAMENTO</a></li>
 	  <li><a href="team.html">TEAM</a></li>
-	  <li><a href="">CLIENT</a></li>
+	  <li><a href="Compra.html">Compra</a></li>
 	  <li><a href="">FAQ</a></li>
 	</ul>
 

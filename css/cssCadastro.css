@@ -4,10 +4,13 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url(img/ballon.png);
+  background-image: url(img/minimalist.png);
   background-size: cover;
   background-position: center;
   height: 85vh;
+  color: aliceblue;
+
+  
 } 
 
 

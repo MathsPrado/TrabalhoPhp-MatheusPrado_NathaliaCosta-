@@ -1,4 +1,5 @@
 <?php
+$desconto = 0;
 	if (isset($_POST['nome'])){
 		$nome=$_POST['nome'];
 	}else {
@@ -14,13 +15,15 @@
 	}else{
 		$senha="";
 	}
-	if (isset($_POST['check1'])){
-		$check1=$_POST['check1'];
+	if (isset($_POST['check2'])){
+		$check1=$_POST['check2'];
+		$desconto = 0.10;
 	}else{
 		$check1="Forma de pagamento não escolhida";
 	}
-	if (isset($_POST['check2'])){
-		$check2=$_POST['check2'];
+	if (isset($_POST['check3'])){
+		$check2=$_POST['check3'];
+
 	}else{
 		$check2="Forma de pagamento não escolhida";
 	}
@@ -44,6 +47,9 @@
 	}else {
 		$sexo="";
 	}
+	$valorT=100;
+	$descontoTo = $desconto * $valorT;
+	$valorTotal = $valorT - $descontoTo;
 
 	 $cd = 'Nome:' . $nome . ', senha:' . $senha . 'checkbox'. $check1 . ', checkbnox:' . $check2 . ', Cidade:'. $cidade .', Data de nascimento:'. $datanascimento . ', Comentario:' . $come .', Sexo:' .$sexo;
 
@@ -122,6 +128,7 @@
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
+		<p> Valor Do orçamento (com preço de teste= 100 sem o desconto): <?php echo $valorTotal; ?> </p>
 	
 			
 		</footer>

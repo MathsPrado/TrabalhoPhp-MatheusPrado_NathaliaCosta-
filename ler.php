@@ -1,5 +1,11 @@
 <?php
 $desconto = 0;
+if (isset($_POST['holdname'])){
+	$e=$_POST['holdname'];
+}else {
+	$e="lalal";
+}
+
 	if (isset($_POST['nome'])){
 		$nome=$_POST['nome'];
 	}else {
@@ -47,13 +53,19 @@ $desconto = 0;
 	}else {
 		$sexo="";
 	}
+	if (isset($_POST['holdname'])){
+		$valorVamove=$_POST['holdname'];
+	}else{
+		$valorVamove="Sem valor selecionada";
+	}
+
 	$valorT=100;
 	$descontoTo = $desconto * $valorT;
 	$valorTotal = $valorT - $descontoTo;
 
 	 $cd = 'Nome:' . $nome . ', senha:' . $senha . 'checkbox'. $check1 . ', checkbnox:' . $check2 . ', Cidade:'. $cidade .', Data de nascimento:'. $datanascimento . ', Comentario:' . $come .', Sexo:' .$sexo;
 
-	$fp = fopen("Ingresso.txt", "a");
+	$fp = fopen("Orçamento.txt", "a");
 
 	$escreve = fwrite ( $fp , $cd); 
 
@@ -129,7 +141,7 @@ $desconto = 0;
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
 		<p> Valor Do orçamento (com preço de teste= 100 sem o desconto): <?php echo $valorTotal; ?> </p>
-	
+		<p>teste pegado do Compra.html: <?php echo $e; ?></p>
 			
 		</footer>
 

@@ -1,15 +1,16 @@
-<!-- <?php
-	if (isset($_POST['b'])){
-		$check1=$_POST['b'];
-		$desconto = 0.10;
-	}else{
-		$check1="Forma de pagamento não escolhida";
+<?php 
+	if (isset($_POST['e'])){
+        $e=$_POST['e'];
+	}else {
+		$e="";
 	}
-	if (isset($_POST['a'])){
-		$check2=$_POST['a'];
-
-?> 
-
+	if (isset($_POST['d'])){
+		$d=$_POST['d'];
+	}else {
+        $d="";
+	}
+?>
+    
 <!DOCTYPE HTML>
 
 <html>
@@ -18,10 +19,10 @@
 	<title>Twenty by HTML5 UP</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+	 <link rel="stylesheet" href="css/cssCadastro.css"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
-	 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
-	 <link rel="stylesheet" href="css/cssCadastro.css"> 
 
 </head>
 <nav class="navigation">
@@ -60,12 +61,11 @@
 	</section>
 
   </nav>
-
-<body class="index is-preload">
+<body  class="index is-preload"  >
 	<div id="page-wrapper" >
 
 
-		<article id="main">
+	<article id="main">
 
 			<header class="special container" >
 
@@ -108,8 +108,9 @@
 					<input type="date" class="form-control" value="datanascimento" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
 					<br></br>
 
-					 <!-- <input type="hidden" name="holdname" value="<? echo "$name" ?>">  -->
-					<!-- <p>
+                    <input type="hidden" name="holdname" value="<?php echo "$e" ?>">  
+                   
+					<p>
 						<textarea name="come" cols="40" rows="3">Deixe um comentário!!!</textarea>
 					</p>
 
@@ -124,8 +125,9 @@
 						<input type="button" name="botao" value="BOTÃO" />
 					</p>
 				</form>
-
-				<h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
+                <h4> <?php  echo $e; ?></h4>
+                <h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
+              
 
 			</header>
 		</article>
@@ -133,6 +135,9 @@
 			<footer>
 		    </footer>
 		</section>
+		
+	
+
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script>
@@ -146,6 +151,7 @@
 	 });
 	  
 				   
-		</script> -->
-<!-- </body>
-</html> -->
+		</script>
+</body>
+
+</html>

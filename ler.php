@@ -104,14 +104,14 @@
 	</section>
 
   </nav>
-<body  class="index is-preload" >
+<body  class="index is-preload"  >
 	<div id="page-wrapper" >
 
 
 
 		
 		<!-- Footer -->
-		<footer id="footer" style="text-align: center;">
+		<footer id="footer" style="text-align: center; color:aliceblue;">
 		<p><u>Seus dados pessoais</u></p>
           <p>Nome: <?php echo $nome; ?></p>
 		<p>Sobrenome: <?php echo $sobrenome; ?></p>

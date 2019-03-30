@@ -17,12 +17,12 @@
 	if (isset($_POST['check1'])){
 		$check1=$_POST['check1'];
 	}else{
-		$check1="Esse ingresso não foi escolhido";
+		$check1="Forma de pagamento não escolhida";
 	}
 	if (isset($_POST['check2'])){
 		$check2=$_POST['check2'];
 	}else{
-		$check2="Esse ingresso não foi escolhido";
+		$check2="Forma de pagamento não escolhida";
 	}
 	if (isset($_POST['cidade'])){
 		$cidade=$_POST['cidade'];

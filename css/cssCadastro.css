@@ -1,6 +1,14 @@
-.badge badge-pill badge-primary{
+ .formCad{
     text-align: center;
-}
+} 
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(img/ballon.png);
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+} 
 
 
 .header {
@@ -213,7 +221,7 @@
   .navigation-open .navigation__social-ul li:nth-child(2) {   
     transition-delay: .46s;
   }
-  }
+  
   
   .navigation-open .navigation__social-ul li:nth-child(4) {   
     transition-delay: .4s;

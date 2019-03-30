@@ -54,17 +54,17 @@
   </nav>
 
 <body class="index is-preload">
-	<div id="page-wrapper" style="   background: dimgrey;">
+	<div id="page-wrapper" >
 
 
 		<article id="main">
 
 			<header class="special container" >
 
-				<h1 style="width: 70%; height:19%; text-align: -webkit-right;">Cadastro de passagem</h1>
+				<h1 style="width: 58%; height:19%; text-align: -webkit-right;"> Orçamento</h1>
 				<br></br>
 
-				<form action="ler.php" style="text-align: center" method="post">
+				<form action="ler.php" style="text-align: center; width: 100%;  padding: 46px 359px; " method="post">
 
 					<p> Nome:
 						<input type="text" style="border: solid;" name="nome" /> </p>
@@ -76,13 +76,11 @@
 						<input type="radio" name="sexo" value="Masculino" />Masculino
 						<input type="radio" name="sexo" value="Feminino" />Feminino
 					</p>
-					<p> Ingresso:</p>
-						<input type="checkbox" name="check1" class="form-check-input" value="Ingresso1">n sei oq
+					<p> Formas de pagamento:</p>
+						<input type="checkbox" name="check2" value="Ingresso2">á vista (10% de desconto)
 						<br></br>
-						<input type="checkbox" name="check2" value="Ingresso2">n sei oq1
-						<br></br>
-						<input type="checkbox" name="check3" value="Ingresso2">n sei oq2 </p>
-					<p> Escolha sua Cidade:
+						<input type="checkbox" name="check3" value="Ingresso2"> cartao de crédito</p>
+					<p> Escolha a cidade de retirada
 						<Select name="cidade">
 							<option value=""></option>
 							<option value="Itupeva">Itupeva</option>
@@ -99,7 +97,7 @@
 					</p>
 
 					<label for="datanascimento">Data Nascimento: </label>
-					<input type="date" class="form-control" value="datanascimento" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
+					<input type="date" class="form-control" value="datanascimento" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
 					<br></br>
 					<p>
 						<textarea name="come" cols="40" rows="3">Deixe um comentário!!!</textarea>
@@ -117,7 +115,7 @@
 					</p>
 				</form>
 
-				<h4>Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
+				<h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
 
 			</header>
 		</article>

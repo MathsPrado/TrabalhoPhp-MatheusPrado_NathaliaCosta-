@@ -6,14 +6,14 @@
           font-family: 'Roboto Condensed', sans-serif;     
           
       }
-      body {
+       body {
         padding: 0;
         margin: 0;
-        background-image: url(img/forest-minimalism.jpg);
+        background-image: url(img/fundoCity.jpg);
           background-size: cover;
           background-position: center;
           height: 85vh;
-      }
+      } 
       
       *,
       *:before,

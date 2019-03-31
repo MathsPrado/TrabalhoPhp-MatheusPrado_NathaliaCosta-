@@ -1,14 +1,19 @@
 <?php 
-	if (isset($_POST['e'])){
-        $e=$_POST['e'];
-	}else {
-		$e="";
-	}
-	if (isset($_POST['d'])){
-		$d=$_POST['d'];
-	}else {
-        $d="";
-	}
+	if (isset($_POST['prod1'])){
+		$produto1=$_POST['prod1'];
+}else {
+$produto1="N";
+}
+if (isset($_POST['prod2'])){
+$produto2=$_POST['prod2'];
+}else {
+		$produto2="N";
+}
+if (isset($_POST['prod3'])){
+$produto3=$_POST['prod3'];
+}else {
+		$produto3="N";
+}
 ?>
     
 <!DOCTYPE HTML>
@@ -36,11 +41,11 @@
 	</section>
 
 	<ul class="navigation__ul">
-	  <li><a href="index.html">HOME</a></li>
-	  <li><a href="orcamento.php">ORÇAMENTO</a></li>
-	  <li><a href="team.html">TEAM</a></li>
-	  <li><a href="Compra.html">Compra</a></li>
-	  <li><a href="">FAQ</a></li>
+	<li><a href="index.html">HOME</a></li>
+      <li><a href="Itens.php">Compra</a></li>
+      <li><a href="team.html">TEAM</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
 	</ul>
 
 	<section class="navigation__social">
@@ -108,7 +113,10 @@
 					<input type="date" class="form-control" value="datanascimento" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
 					<br></br>
 
-                    <input type="hidden" name="holdname" value="<?php echo "$e" ?>">  
+                  
+										<input type="hidden" name="produto1" value="<?php echo "$produto1" ?>"> 
+										<input type="hidden" name="produto2" value="<?php echo "$produto2" ?>">  
+										<input type="hidden" name="produto3" value="<?php echo "$produto3" ?>">   
                    
 					<p>
 						<textarea name="come" cols="40" rows="3">Deixe um comentário!!!</textarea>
@@ -125,7 +133,9 @@
 						<input type="button" name="botao" value="BOTÃO" />
 					</p>
 				</form>
-                <h4> <?php  echo $e; ?></h4>
+				<h4> <?php  echo $produto1; ?></h4>
+								<h4> <?php  echo $produto2; ?></h4>
+								<h4> <?php  echo $produto3; ?></h4>
                 <h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
               
 

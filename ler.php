@@ -1,9 +1,20 @@
 <?php
 $desconto = 0;
-if (isset($_POST['holdname'])){
-	$e=$_POST['holdname'];
+if (isset($_POST['produto1'])){
+	$produto1=$_POST['produto1'];
 }else {
-	$e="lalal";
+	$produto1="N";
+}
+if (isset($_POST['produto2'])){
+	$produto2=$_POST['produto2'];
+
+}else {
+	$produto2="N";
+}
+if (isset($_POST['produto3'])){
+	$produto3=$_POST['produto3'];
+}else {
+	$produto3="N";
 }
 
 	if (isset($_POST['nome'])){
@@ -59,7 +70,8 @@ if (isset($_POST['holdname'])){
 		$valorVamove="Sem valor selecionada";
 	}
 
-	$valorT=100;
+	$valorT=0;
+	$valorT= $produto1 + $produto2 + $produto3;
 	$descontoTo = $desconto * $valorT;
 	$valorTotal = $valorT - $descontoTo;
 
@@ -70,6 +82,8 @@ if (isset($_POST['holdname'])){
 	$escreve = fwrite ( $fp , $cd); 
 
 	fclose ($fp);
+
+
 	
 ?>
 <!DOCTYPE HTML>
@@ -97,11 +111,11 @@ if (isset($_POST['holdname'])){
 	</section>
 
 	<ul class="navigation__ul">
-	  <li><a href="index.html">HOME</a></li>
-	  <li><a href="orcamento.php">ORÇAMENTO</a></li>
-	  <li><a href="team.html">TEAM</a></li>
-	  <li><a href="Compra.html">COMPRA</a></li>
-	  <li><a href="">FAQ</a></li>
+	<li><a href="index.html">HOME</a></li>
+      <li><a href="Itens.php">Compra</a></li>
+      <li><a href="team.html">TEAM</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
 	</ul>
 
 	<section class="navigation__social">
@@ -140,8 +154,10 @@ if (isset($_POST['holdname'])){
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
-		<p> Valor Do orçamento (com preço de teste= 100 sem o desconto): <?php echo $valorTotal; ?> </p>
-		<p>teste pegado do Compra.html: <?php echo $e; ?></p>
+		<p> Valor Do orçamento: <?php echo $valorTotal; ?> </p>
+		<p>teste pegado do Compra.html prod1: <?php echo $produto1; ?></p>
+		<p>teste pegado do Compra.html prod2 : <?php echo $produto2; ?></p>
+		<p>teste pegado do Compra.html prod3: <?php echo $produto3; ?></p>
 			
 		</footer>
 

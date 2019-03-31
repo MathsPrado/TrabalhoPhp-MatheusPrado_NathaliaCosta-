@@ -48,11 +48,11 @@
   
     <div class="prod-card">
       <div class="img">
-        <img src="css/img/img.jpg" alt="">
+        <img src="css/img/papel.jpg" alt="">
       </div>
       <div class="prod-info">
-        <h2>Original T-Shirt </h2>
-        <span class="desc">For Men </span>
+        <h2>Papel de Parede </h2>
+        <span class="desc">For you house </span>
         <br>
         <span class="price"><i class="ion-icon-logo-usd"></i>R$ 200.00</span>
         <h3>Especificações
@@ -76,11 +76,11 @@
     </form>
     <div class="prod-card2">
       <div class="img">
-        <img src="css/img/short.jpg" alt="">
+        <img src="css/img/cime.jpg" alt="">
       </div>
       <div class="prod-info">
-        <h2>Mens Short </h2>
-        <span class="desc">For Men </span>
+        <h2>CIMENTO </h2>
+        <span class="desc">For your house</span>
         <br>
         <span class="price"><i class="ion-icon-logo-usd"></i>R$ 170.00</span>
         <h3>Especificações
@@ -105,11 +105,11 @@
       <br></br>
       <div class="prod-card3">
         <div class="img">
-          <img src="css/img/nike.jpeg" alt="">
+          <img src="css/img/piso.jpg" alt="">
         </div>
         <div class="prod-info">
-          <h2>Mens Short </h2>
-          <span class="desc">For Men </span>
+          <h2>Piso </h2>
+          <span class="desc">For you house</span>
           <br>
           <span class="price"><i class="ion-icon-logo-usd"></i>R$ 180.00</span>
           <h3>Especificações

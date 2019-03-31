@@ -67,7 +67,8 @@ $produto3=$_POST['prod3'];
 
   </nav>
 <body  class="index is-preload"  >
-	<div id="page-wrapper" >
+	<div id="page-wrapper" style="
+    color: aliceblue" >
 
 
 	<article id="main">

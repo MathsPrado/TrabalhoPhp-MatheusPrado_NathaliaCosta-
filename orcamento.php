@@ -119,6 +119,21 @@ $produto3=$_POST['prod3'];
 										<input type="hidden" name="produto3" value="<?php echo "$produto3" ?>">   
                    
 					<p>
+					<p> Produto primeiro, Quantidade:
+						<Select name="qntd">
+							<option value=""></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4 ">4 </option>
+							<option value="5">5</option>
+							<option value="6 ">6</option>
+							<option value="7 ">7</option>
+							<option value="8 ">8</option>
+							<option value="9 ">9</option>
+
+						</Select>
+					</p>
 						<textarea name="come" cols="40" rows="3">Deixe um comentário!!!</textarea>
 					</p>
 

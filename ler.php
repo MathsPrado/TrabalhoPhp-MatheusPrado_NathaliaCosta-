@@ -1,22 +1,27 @@
 <?php
 $desconto = 0;
-if (isset($_POST['produto1'])){
-	$produto1=$_POST['produto1'];
-}else {
-	$produto1="N";
-}
-if (isset($_POST['produto2'])){
-	$produto2=$_POST['produto2'];
+	if (isset($_POST['produto1'])){
+		$produto1=$_POST['produto1'];
+	}else {
+		$produto1="N";
+	}
+	if (isset($_POST['produto2'])){
+		$produto2=$_POST['produto2'];
 
-}else {
-	$produto2="N";
-}
-if (isset($_POST['produto3'])){
-	$produto3=$_POST['produto3'];
-}else {
-	$produto3="N";
-}
+	}else {
+		$produto2="N";
+	}
+	if (isset($_POST['produto3'])){
+		$produto3=$_POST['produto3'];
+	}else {
+		$produto3="N";
+	}
 
+	if (isset($_POST['qntd'])){
+		$qtd1=$_POST['qntd'];
+	}else {
+		$qtd1="";
+	}
 	if (isset($_POST['nome'])){
 		$nome=$_POST['nome'];
 	}else {
@@ -155,6 +160,7 @@ if (isset($_POST['produto3'])){
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
 		<p> Valor Do orçamento: <?php echo $valorTotal; ?> </p>
+		<p>qntd <?php echo $qtd1; ?></p>
 		<p>teste pegado do Compra.html prod1: <?php echo $produto1; ?></p>
 		<p>teste pegado do Compra.html prod2 : <?php echo $produto2; ?></p>
 		<p>teste pegado do Compra.html prod3: <?php echo $produto3; ?></p>

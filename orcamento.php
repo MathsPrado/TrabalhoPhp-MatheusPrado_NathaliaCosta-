@@ -21,7 +21,7 @@ $produto3=$_POST['prod3'];
 <html>
 
 <head>
-	<title>Twenty by HTML5 UP</title>
+	<title>Orçamento</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">

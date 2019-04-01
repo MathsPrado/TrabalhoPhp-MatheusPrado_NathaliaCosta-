@@ -77,7 +77,7 @@ $desconto = 0;
 
 	$valorT=0;
 	$valorT= $produto1 + $produto2 + $produto3;
-	$descontoTo = $desconto * $valorT;
+	$descontoTo = $desconto * $valorT; 
 	$valorTotal = $valorT - $descontoTo;
 
 	 $cd = 'Nome:' . $nome . ', senha:' . $senha . 'checkbox'. $check1 . ', checkbnox:' . $check2 . ', Cidade:'. $cidade .', Data de nascimento:'. $datanascimento . ', Comentario:' . $come .', Sexo:' .$sexo;
@@ -96,7 +96,7 @@ $desconto = 0;
 <html>
 
 <head>
-	<title>Twenty by HTML5 UP</title>
+	<title>Orçamento</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">

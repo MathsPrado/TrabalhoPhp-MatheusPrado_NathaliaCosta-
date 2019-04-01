@@ -1,26 +1,46 @@
 <?php
+
+date_default_timezone_set('America/Sao_Paulo');
+$mes= date("M");
+
+$dia =date("d");
+
+$ano =date("Y");
+
+ $datatxt = date('d-m-Y', strtotime('+1 week'));
+
 $desconto = 0;
 	if (isset($_POST['produto1'])){
 		$produto1=$_POST['produto1'];
 	}else {
-		$produto1="N";
+		$produto1="0";
 	}
 	if (isset($_POST['produto2'])){
 		$produto2=$_POST['produto2'];
-
 	}else {
-		$produto2="N";
+		$produto2="0";
 	}
 	if (isset($_POST['produto3'])){
 		$produto3=$_POST['produto3'];
 	}else {
-		$produto3="N";
+		$produto3="0";
 	}
 
+	
 	if (isset($_POST['qntd'])){
 		$qtd1=$_POST['qntd'];
 	}else {
-		$qtd1="";
+		$qtd1="0";
+	}
+	if (isset($_POST['qntd1'])){
+		$qtd2=$_POST['qntd1'];
+	}else {
+		$qtd2="0";
+	}
+	if (isset($_POST['qntd2'])){
+		$qtd3=$_POST['qntd2'];
+	}else {
+		$qtd3="0";
 	}
 	if (isset($_POST['nome'])){
 		$nome=$_POST['nome'];
@@ -32,22 +52,19 @@ $desconto = 0;
 	}else {
         $sobrenome="";
 	}
-	if (isset($_POST['senha'])){
-		$senha=$_POST['senha'];
-	}else{
-		$senha="";
-	}
+
 	if (isset($_POST['check2'])){
 		$check1=$_POST['check2'];
 		$desconto = 0.10;
+	
 	}else{
-		$check1="Forma de pagamento não escolhida";
+		$check1="";
 	}
 	if (isset($_POST['check3'])){
 		$check2=$_POST['check3'];
 
 	}else{
-		$check2="Forma de pagamento não escolhida";
+		$check2="";
 	}
 	if (isset($_POST['cidade'])){
 		$cidade=$_POST['cidade'];
@@ -76,11 +93,28 @@ $desconto = 0;
 	}
 
 	$valorT=0;
-	$valorT= $produto1 + $produto2 + $produto3;
+	$valorP1=0;
+	$valorP1= $produto1 * $qtd1;
+	$valorP1= number_format(($valorP1), 2);
+
+	$valorP2=0;
+	$valorP2= $produto2 * $qtd2;
+	$valorP2 = number_format(($valorP2), 2);
+
+	$valorP3=0;
+	$valorP3= $produto3 * $qtd3;
+	$valorP3 = number_format(($valorP3), 2);
+
+	$valorT= $valorP3 + $valorP2 + $valorP1;
 	$descontoTo = $desconto * $valorT; 
+	$descontoTo = number_format(($descontoTo), 2);
+
 	$valorTotal = $valorT - $descontoTo;
 
-	 $cd = 'Nome:' . $nome . ', senha:' . $senha . 'checkbox'. $check1 . ', checkbnox:' . $check2 . ', Cidade:'. $cidade .', Data de nascimento:'. $datanascimento . ', Comentario:' . $come .', Sexo:' .$sexo;
+	 $cd = 'Nome:' . $nome .  " Jundiai " . $dia . " de " . $mes . " de " . $ano . 
+	' , produto:' . $produto1 .', valor total do produto '. $valorP1.
+	 ', produto:'. $produto2 .', valor total do produto '. $valorP2 .', produto:'. $produto3 .', valor total do produto '. $valorP3 .
+	  ', Valor de desconto:' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
 
 	$fp = fopen("Orçamento.txt", "a");
 
@@ -117,7 +151,7 @@ $desconto = 0;
 
 	<ul class="navigation__ul">
 	<li><a href="index.html">HOME</a></li>
-      <li><a href="Itens.php">Compra</a></li>
+      <li><a href="Itens.php">ORÇAMENTO</a></li>
       <li><a href="team.html">TEAM</a></li>
       <li><a href=""></a></li>
       <li><a href=""></a></li>
@@ -150,21 +184,30 @@ $desconto = 0;
 		<!-- Footer -->
 		<footer id="footer" style="text-align: center; color:aliceblue;">
 		<p><u>Seus dados pessoais</u></p>
+		<p> <?php echo " Jundiai " . $dia . " de " . $mes . " de " . $ano;?></p>
           <p>Nome: <?php echo $nome; ?></p>
 		<p>Sobrenome: <?php echo $sobrenome; ?></p>
 	<p>Sexo: <?php echo $sexo; ?></p>
-		<p>Senha: <?php echo $senha; ?></p>
-		<p> escolhido: <?php echo $check1; ?></p>
-		<p> escolhido: <?php echo $check2; ?></p>
+
+		<p> Forma de pagamento: <?php echo $check1; ?></p>
+		<p> Forma de pagamento: <?php echo $check2; ?></p>
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
-		<p> Valor Do orçamento: <?php echo $valorTotal; ?> </p>
+		<p> Valor Do orçamento: R$<?php echo number_format(($valorTotal), 2);  ?> </p>
 		<p>qntd <?php echo $qtd1; ?></p>
-		<p>teste pegado do Compra.html prod1: <?php echo $produto1; ?></p>
-		<p>teste pegado do Compra.html prod2 : <?php echo $produto2; ?></p>
-		<p>teste pegado do Compra.html prod3: <?php echo $produto3; ?></p>
+		<p>qntd <?php echo $qtd2; ?></p>
+		<p>qntd <?php echo $qtd3; ?></p>
+		<p>qntd <?php echo $valorP1; ?></p>
+		<p>qntd <?php echo $valorP2; ?></p>
+		<p>qntd <?php echo $valorP3; ?></p>
 			
+		<p>teste pegado do Compra.html prod1: R$<?php echo number_format(($produto1), 2);  ?></p>
+		<p>teste pegado do Compra.html prod2 : R$<?php echo number_format(($produto2), 2);  ?></p>
+		<p>teste pegado do Compra.html prod3: R$<?php echo number_format(($produto3), 2);  ?></p>
+			
+			<?php  echo 'Prazo valido do orçamento é de até : '.  $datatxt  ."<br>"; ?>
+
 		</footer>
 
 	</div>

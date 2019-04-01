@@ -27,7 +27,7 @@
 
     <ul class="navigation__ul">
        <li><a href="index.html">HOME</a></li>
-      <li><a href="Itens.php">Compra</a></li>
+      <li><a href="Itens.php">ORÇAMENTO</a></li>
       <li><a href="team.html">TEAM</a></li>
       <li><a href=""></a></li>
       <li><a href=""></a></li>
@@ -51,15 +51,15 @@
         <img src="css/img/papel.jpg" alt="">
       </div>
       <div class="prod-info">
-        <h2>Papel de Parede </h2>
-        <span class="desc">For you house </span>
+        <h2>TRIAX PAPEL DE PAREDE </h2>
+        <span class="desc">Cor: cinza/bege   52 CM X 10 M <br> ID:332675</span>
         <br>
         <span class="price"><i class="ion-icon-logo-usd"></i>R$ 200.00</span>
         <h3>Especificações
         </h3>
-        <h5> CIMENTO PARA USO GERAL, ashasuahsausahsua llllllllll <p> ahsasahsuashasha mash ahasbua ahshgah sau</p>
-          <p>teste teste teste teste teste teste</p>
-          <p> teste teste teste teste teste teste</p>
+        <h5> Papel decorativo vinilizado, para parede, em rolo de 52cm x 10m. <br>Necessita de cola para instalação (vendida separadamente).</p>
+          <p>Limpeza: Pano levemente umedecido com água e sabão neutro.</p>
+          <p> Cuidados: Não utilizar produtos químicos ou abrasivos na limpeza.</p>
         <span>
         
           <br>
@@ -79,15 +79,16 @@
         <img src="css/img/cime.jpg" alt="">
       </div>
       <div class="prod-info">
-        <h2>CIMENTO </h2>
-        <span class="desc">For your house</span>
+        <h2>Cimento Todas As Obras 50kg </h2>
+        <span class="desc">Cód: 604691</span>
         <br>
         <span class="price"><i class="ion-icon-logo-usd"></i>R$ 170.00</span>
         <h3>Especificações
         </h3>
-        <h5> CIMENTO PARA USO GERAL, ashasuahsausahsua llllllllll <p> ahsasahsuashasha mash ahasbua ahshgah sau</p>
-          <p>teste teste teste teste teste teste</p>
-          <p> teste teste teste teste teste teste</p>
+        <h5> O único com propriedades de Silicatos de cálcio, alumínio e ferro, 
+          <br> trazendo maior resistência, aderência, elasticidade e economia.
+  
+   
        
    </h5>
         <span>
@@ -108,15 +109,15 @@
           <img src="css/img/piso.jpg" alt="">
         </div>
         <div class="prod-info">
-          <h2>Piso </h2>
-          <span class="desc">For you house</span>
+          <h2>Piso Bold Ethios Cinza 45x45cm </h2>
+          <span class="desc">Cód: 715337</span>
           <br>
           <span class="price"><i class="ion-icon-logo-usd"></i>R$ 180.00</span>
           <h3>Especificações
           </h3>
-          <h5> CIMENTO PARA USO GERAL, ashasuahsausahsua llllllllll <p> ahsasahsuashasha mash ahasbua ahshgah sau</p>
-            <p>teste teste teste teste teste teste</p>
-            <p> teste teste teste teste teste teste</p>
+          <h5> Produto possui uma variação de tonalidade leve, <br>
+            e/ou no padrão dentro de cores similares. </p>
+ 
           <span>
     
             <br>

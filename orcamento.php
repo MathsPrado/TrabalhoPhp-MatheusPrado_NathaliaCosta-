@@ -1,18 +1,21 @@
 <?php 
 	if (isset($_POST['prod1'])){
 		$produto1=$_POST['prod1'];
+		$linha1 =1;
 }else {
-$produto1="N";
+$produto1="0";
 }
 if (isset($_POST['prod2'])){
 $produto2=$_POST['prod2'];
+	$linha2 =1;
 }else {
-		$produto2="N";
+		$produto2="0";
 }
 if (isset($_POST['prod3'])){
 $produto3=$_POST['prod3'];
+$linha3 =1;
 }else {
-		$produto3="N";
+		$produto3="0";
 }
 ?>
     
@@ -42,7 +45,7 @@ $produto3=$_POST['prod3'];
 
 	<ul class="navigation__ul">
 	<li><a href="index.html">HOME</a></li>
-      <li><a href="Itens.php">Compra</a></li>
+      <li><a href="Itens.php">ORÇAMENTO</a></li>
       <li><a href="team.html">TEAM</a></li>
       <li><a href=""></a></li>
       <li><a href=""></a></li>
@@ -84,14 +87,13 @@ $produto3=$_POST['prod3'];
 						<input type="text" style="border: solid;" name="nome" /> </p>
 					<p> Sobrenome:
 						<input type="text" style="border: solid; " name="sobrenome" /> </p>
-					<p> Senha
-						<input type="password" style="border: solid; " name="senha" /> </p>
+			
 					<p>SEXO:
 						<input type="radio" name="sexo" value="Masculino" />Masculino
 						<input type="radio" name="sexo" value="Feminino" />Feminino
 					</p>
 					<p> Formas de pagamento:</p>
-						<input type="checkbox" name="check2" value="Ingresso2">á vista (10% de desconto)
+						<input type="checkbox" name="check2" value="A vista">á vista (10% de desconto)
 						<br></br>
 						<input type="checkbox" name="check3" value="Ingresso2"> cartao de crédito</p>
 					<p> Escolha a cidade de retirada
@@ -114,15 +116,32 @@ $produto3=$_POST['prod3'];
 					<input type="date" class="form-control" value="datanascimento" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
 					<br></br>
 
-                  
-										<input type="hidden" name="produto1" value="<?php echo "$produto1" ?>"> 
-										<input type="hidden" name="produto2" value="<?php echo "$produto2" ?>">  
-										<input type="hidden" name="produto3" value="<?php echo "$produto3" ?>">   
+						<input type="hidden" name="produto1" value="<?php echo "$produto1" ?>"> 
+						<input type="hidden" name="produto2" value="<?php echo "$produto2" ?>">  
+						<input type="hidden" name="produto3" value="<?php echo "$produto3" ?>">   
                    
-					<p>
-					<p> Produto primeiro, Quantidade:
-						<Select name="qntd">
-							<option value=""></option>
+				
+				
+					<p class=" prod1" > Primeiro produto, Quantidade:
+					<Select name="qntd">
+						<option value="0"></option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4 ">4 </option>
+						<option value="5">5</option>
+						<option value="6 ">6</option>
+						<option value="7 ">7</option>
+						<option value="8 ">8</option>
+						<option value="9 ">9</option>
+
+						</Select>
+				
+					</p>
+
+					<p class=" prod2" >  segundo produto, Quantidade:
+						<Select name="qntd1">
+							<option value="0"></option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -135,7 +154,23 @@ $produto3=$_POST['prod3'];
 
 						</Select>
 					</p>
-						<textarea name="come" cols="40" rows="3">Deixe um comentário!!!</textarea>
+
+					<p class=" prod3" > terceiro produto, Quantidade:
+						<Select name="qntd2">
+							<option value="0"></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4 ">4 </option>
+							<option value="5">5</option>
+							<option value="6 ">6</option>
+							<option value="7 ">7</option>
+							<option value="8 ">8</option>
+							<option value="9 ">9</option>
+
+						</Select>
+					</p><p> Deixe um comentário!!!</p>
+						<textarea name="come" cols="40" rows="3"></textarea>
 					</p>
 
 
@@ -152,7 +187,7 @@ $produto3=$_POST['prod3'];
 				<h4> <?php  echo $produto1; ?></h4>
 								<h4> <?php  echo $produto2; ?></h4>
 								<h4> <?php  echo $produto3; ?></h4>
-                <h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como ingresso.txt</h4>
+                <h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como Orçamento.txt</h4>
               
 
 			</header>
@@ -176,7 +211,7 @@ $produto3=$_POST['prod3'];
 	   });
 	 });
 	  
-				   
+			   
 		</script>
 </body>
 

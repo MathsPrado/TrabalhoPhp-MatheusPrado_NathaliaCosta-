@@ -4,18 +4,21 @@
 		$linha1 =1;
 }else {
 $produto1="0";
+$linha1 = 0;
 }
 if (isset($_POST['prod2'])){
 $produto2=$_POST['prod2'];
 	$linha2 =1;
 }else {
 		$produto2="0";
+		$linha2 = 0;
 }
 if (isset($_POST['prod3'])){
 $produto3=$_POST['prod3'];
 $linha3 =1;
 }else {
 		$produto3="0";
+		$linha3 = 0;
 }
 ?>
     
@@ -122,23 +125,53 @@ $linha3 =1;
                    
 				
 				
-					<p class=" prod1" > Primeiro produto, Quantidade:
-					<Select name="qntd">
-						<option value="0"></option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4 ">4 </option>
-						<option value="5">5</option>
-						<option value="6 ">6</option>
-						<option value="7 ">7</option>
-						<option value="8 ">8</option>
-						<option value="9 ">9</option>
+						<?php 
+			if($linha1 ==1 ){ 
+			
+				$tab1 = '<p class=" prod" > Primeiro produto, Quantidade:
+				<Select name="qntd">
+					<option value="0"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4 ">4 </option>
+					<option value="5">5</option>
+					<option value="6 ">6</option>
+					<option value="7 ">7</option>
+					<option value="8 ">8</option>
+					<option value="9 ">9</option>
 
-						</Select>
+					</Select>
+			
+				</p>';
+				echo $tab1;
+			}
+		?>
+
+<?php    
+			if($linha2 ==1 ){ 
+	
+				$tab2 = '<p class=" prod1" > segundo produto, Quantidade:
+				<Select name="qntd1">
+					<option value="0"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4 ">4 </option>
+					<option value="5">5</option>
+					<option value="6 ">6</option>
+					<option value="7 ">7</option>
+					<option value="8 ">8</option>
+					<option value="9 ">9</option>
+
+					</Select>
+			
+				</p>';
+				echo $tab2 ;
+			}
+		?>
 				
-					</p>
-
+<!-- 				
 					<p class=" prod2" >  segundo produto, Quantidade:
 						<Select name="qntd1">
 							<option value="0"></option>
@@ -154,7 +187,34 @@ $linha3 =1;
 
 						</Select>
 					</p>
+ -->
+ <?php  
+ 
+			if($linha3 ==1 ){ 
+	
+				$tab3 = '<p class=" prod1" > terceiro produto, Quantidade:
+				<Select name="qntd">
+					<option value="0"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4 ">4 </option>
+					<option value="5">5</option>
+					<option value="6 ">6</option>
+					<option value="7 ">7</option>
+					<option value="8 ">8</option>
+					<option value="9 ">9</option>
 
+					</Select>
+			
+				</p>';
+				echo $tab3 ;
+			}
+		?>
+				
+
+
+<!-- 
 					<p class=" prod3" > terceiro produto, Quantidade:
 						<Select name="qntd2">
 							<option value="0"></option>
@@ -168,7 +228,8 @@ $linha3 =1;
 							<option value="8 ">8</option>
 							<option value="9 ">9</option>
 
-						</Select>
+						</Select> -->
+
 					</p><p> Deixe um comentário!!!</p>
 						<textarea name="come" cols="40" rows="3"></textarea>
 					</p>
@@ -210,7 +271,7 @@ $linha3 =1;
 		 $(".navigation").toggleClass('navigation-open');
 	   });
 	 });
-	  
+	
 			   
 		</script>
 </body>

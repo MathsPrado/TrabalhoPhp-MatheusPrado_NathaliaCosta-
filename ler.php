@@ -9,6 +9,7 @@ $dia =date("d");
 
 $ano =date("Y");
 
+	$dataat = date('d-m-Y');
  $datatxt = date('d-m-Y', strtotime('+1 week'));
 
 $desconto = 0;
@@ -130,7 +131,7 @@ $desconto = 0;
 
 	 $cd .= 'Valor de desconto:  R$' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
 
-	$fp = fopen("Orçamento.txt", "a");
+	$fp = fopen("Orçamento"."_". $nome . "_" . $dataat . ".txt", "a");
 
 	$escreve = fwrite ( $fp , $cd); 
 

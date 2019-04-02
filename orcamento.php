@@ -151,7 +151,7 @@ $linha3 =1;
 <?php    
 			if($linha2 ==1 ){ 
 	
-				$tab2 = '<p class=" prod1" > segundo produto, Quantidade:
+				$tab2 = '<p class=" prod1" > Segundo produto, Quantidade:
 				<Select name="qntd1">
 					<option value="0"></option>
 					<option value="1">1</option>
@@ -175,7 +175,7 @@ $linha3 =1;
  
 			if($linha3 ==1 ){ 
 	
-				$tab3 = '<p class=" prod1" > terceiro produto, Quantidade:
+				$tab3 = '<p class=" prod1" > Terceiro produto, Quantidade:
 				<Select name="qntd2">
 					<option value="0"></option>
 					<option value="1">1</option>

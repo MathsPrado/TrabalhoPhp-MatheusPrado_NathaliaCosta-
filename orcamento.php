@@ -116,7 +116,7 @@ $linha3 =1;
 					</p>
 
 					<label for="datanascimento">Data Nascimento: </label>
-					<input type="date" class="form-control" value="datanascimento" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
+					<input type="date" class="form-control" name="datanascimento" value="" style="width: 97%;" aria-describedby="DatanascimentoHelp" placeholder="Digite a data de nascimento">
 					<br></br>
 
 						<input type="hidden" name="produto1" value="<?php echo "$produto1" ?>"> 
@@ -170,24 +170,7 @@ $linha3 =1;
 				echo $tab2 ;
 			}
 		?>
-				
-<!-- 				
-					<p class=" prod2" >  segundo produto, Quantidade:
-						<Select name="qntd1">
-							<option value="0"></option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4 ">4 </option>
-							<option value="5">5</option>
-							<option value="6 ">6</option>
-							<option value="7 ">7</option>
-							<option value="8 ">8</option>
-							<option value="9 ">9</option>
 
-						</Select>
-					</p>
- -->
  <?php  
  
 			if($linha3 ==1 ){ 
@@ -211,24 +194,6 @@ $linha3 =1;
 				echo $tab3 ;
 			}
 		?>
-				
-
-
-<!-- 
-					<p class=" prod3" > terceiro produto, Quantidade:
-						<Select name="qntd2">
-							<option value="0"></option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4 ">4 </option>
-							<option value="5">5</option>
-							<option value="6 ">6</option>
-							<option value="7 ">7</option>
-							<option value="8 ">8</option>
-							<option value="9 ">9</option>
-
-						</Select> -->
 
 					</p><p> Deixe um comentário!!!</p>
 						<textarea name="come" cols="40" rows="3"></textarea>
@@ -245,10 +210,8 @@ $linha3 =1;
 						<input type="button" name="botao" value="BOTÃO" />
 					</p>
 				</form>
-				<h4> <?php  echo $produto1; ?></h4>
-								<h4> <?php  echo $produto2; ?></h4>
-								<h4> <?php  echo $produto3; ?></h4>
-                <h4 style=" padding-left: 237px;">Após a confirmação do cadasto ele será salvo como Orçamento.txt</h4>
+			
+                <h4 style=" padding-left: 237px;">Após a confirmação do cadasto será salvo um arquivo txt</h4>
               
 
 			</header>

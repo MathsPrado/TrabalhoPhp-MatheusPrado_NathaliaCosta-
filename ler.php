@@ -1,4 +1,9 @@
 <?php
+(double)$qtd1 = 0;
+(double) $qtd2 = 0;
+(double) $qtd3 = 0;
+
+
 
 date_default_timezone_set('America/Sao_Paulo');
 $mes= date("M");
@@ -6,6 +11,7 @@ $mes= date("M");
 $dia =date("d");
 
 $ano =date("Y");
+ $dataDia = date('d-m-Y ');
 
  $datatxt = date('d-m-Y', strtotime('+1 week'));
 
@@ -13,34 +19,35 @@ $desconto = 0;
 	if (isset($_POST['produto1'])){
 		$produto1=$_POST['produto1'];
 	}else {
-		$produto1="0";
+		$produto1=0;
 	}
 	if (isset($_POST['produto2'])){
 		$produto2=$_POST['produto2'];
 	}else {
-		$produto2="0";
+		$produto2=0;
 	}
 	if (isset($_POST['produto3'])){
 		$produto3=$_POST['produto3'];
 	}else {
-		$produto3="0";
+		$produto3=0;
 	}
 
+	
 	
 	if (isset($_POST['qntd'])){
 		$qtd1=$_POST['qntd'];
 	}else {
-		$qtd1="0";
+		$qtd1=0;
 	}
 	if (isset($_POST['qntd1'])){
 		$qtd2=$_POST['qntd1'];
 	}else {
-		$qtd2="0";
+		$qtd2=0;
 	}
 	if (isset($_POST['qntd2'])){
 		$qtd3=$_POST['qntd2'];
 	}else {
-		$qtd3="0";
+		$qtd3=0;
 	}
 	if (isset($_POST['nome'])){
 		$nome=$_POST['nome'];
@@ -94,29 +101,40 @@ $desconto = 0;
 
 	$valorT=0;
 	$valorP1=0;
-	$valorP1= $produto1 * $qtd1;
+	$valorP1= $produto1 * (double)$qtd1 ;
 	$valorP1= number_format(($valorP1), 2);
 
 	$valorP2=0;
-	$valorP2= $produto2 * $qtd2;
+	$valorP2= $produto2 * (double)$qtd2;
 	$valorP2 = number_format(($valorP2), 2);
 
 	$valorP3=0;
-	$valorP3= $produto3 * $qtd3;
+	$valorP3= $produto3 * (double)$qtd3;
 	$valorP3 = number_format(($valorP3), 2);
 
-	$valorT= $valorP3 + $valorP2 + $valorP1;
+	$valorT= (double)$valorP3 + (double)$valorP2 + (double)$valorP1;
 	$descontoTo = $desconto * $valorT; 
 	$descontoTo = number_format(($descontoTo), 2);
 
 	$valorTotal = $valorT - $descontoTo;
 
-	 $cd = 'Nome:' . $nome .  " Jundiai " . $dia . " de " . $mes . " de " . $ano . 
-	' , produto:' . $produto1 .', valor total do produto '. $valorP1.
-	 ', produto:'. $produto2 .', valor total do produto '. $valorP2 .', produto:'. $produto3 .', valor total do produto '. $valorP3 .
-	  ', Valor de desconto:' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
+	$cd = 'Nome:' . $nome .  " Jundiai " . $dia . " de " . $mes . " de " . $ano;
 
-	$fp = fopen("Orçamento.txt", "a");
+	if($qtd1>0){
+		echo ("<script> alert('AE KARAI'); </script> ");
+		$cd .= ' , produto:' . $produto1 .',\n valor total do produto:  R$'. $valorP1 . "Quantidade: ". $qtd1 ;
+	}
+
+	if($qtd2>0){
+		$cd .=  ', produto:'. $produto2 .', valor total do produto:  R$'. $valorP2  ;
+	}
+	if($qtd3>0){
+		$cd .=  ', produto:'. $produto3 .', valor total do produto:  R$'. $valorP3  ;
+	}
+
+	 $cd .= 'Valor de desconto:  R$' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
+
+	$fp = fopen("Orçamento_". $nome ."_" . $dataDia .".txt", "a");
 
 	$escreve = fwrite ( $fp , $cd); 
 
@@ -195,16 +213,7 @@ $desconto = 0;
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
 		<p> Valor Do orçamento: R$<?php echo number_format(($valorTotal), 2);  ?> </p>
-		<p>qntd <?php echo $qtd1; ?></p>
-		<p>qntd <?php echo $qtd2; ?></p>
-		<p>qntd <?php echo $qtd3; ?></p>
-		<p>qntd <?php echo $valorP1; ?></p>
-		<p>qntd <?php echo $valorP2; ?></p>
-		<p>qntd <?php echo $valorP3; ?></p>
-			
-		<p>teste pegado do Compra.html prod1: R$<?php echo number_format(($produto1), 2);  ?></p>
-		<p>teste pegado do Compra.html prod2 : R$<?php echo number_format(($produto2), 2);  ?></p>
-		<p>teste pegado do Compra.html prod3: R$<?php echo number_format(($produto3), 2);  ?></p>
+	
 			
 			<?php  echo 'Prazo valido do orçamento é de até : '.  $datatxt  ."<br>"; ?>
 

@@ -104,8 +104,8 @@ $desconto = 0;
 	$valorP3= $produto3 * (double)$qtd3;
 	$valorP3 = number_format(($valorP3), 2);
 
-	$valorT= $valorP3 + $valorP2 + $valorP1;
-	$descontoTo = $desconto * $valorT; 
+	$valorT= (double)$valorP3 + (double)$valorP2 + (double)$valorP1;
+	 $descontoTo = $desconto * $valorT; 
 	$descontoTo = number_format(($descontoTo), 2);
 
 	$valorTotal = $valorT - $descontoTo;
@@ -204,7 +204,7 @@ $desconto = 0;
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>
-		<p> Valor Do orçamento: R$<?php echo number_format(($valorTotal), 2);  ?> </p>
+		<p> Valor Do orçamento: R$<?php echo $valorTotal  ?> </p>
 	
 			
 			<?php  echo 'Prazo valido do orçamento é de até : '.  $datatxt  ."<br>"; ?>

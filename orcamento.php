@@ -95,10 +95,10 @@ $linha3 =1;
 						<input type="radio" name="sexo" value="Masculino" />Masculino
 						<input type="radio" name="sexo" value="Feminino" />Feminino
 					</p>
-					<p> Formas de pagamento:</p>
-						<input type="checkbox" name="check2" value="A vista">á vista (10% de desconto)
+					<p> Desconto:</p>
+						<input type="checkbox" name="check2" value="10%">caso seja pago á vista terá (10% de desconto)
 						<br></br>
-						<input type="checkbox" name="check3" value="Ingresso2"> cartao de crédito</p>
+					
 					<p> Escolha a cidade de retirada
 						<Select name="cidade">
 							<option value=""></option>
@@ -151,7 +151,7 @@ $linha3 =1;
 <?php    
 			if($linha2 ==1 ){ 
 	
-				$tab2 = '<p class=" prod1" > Segundo produto, Quantidade:
+				$tab2 = '<p class=" prod1" > segundo produto, Quantidade:
 				<Select name="qntd1">
 					<option value="0"></option>
 					<option value="1">1</option>
@@ -175,7 +175,7 @@ $linha3 =1;
  
 			if($linha3 ==1 ){ 
 	
-				$tab3 = '<p class=" prod1" > Terceiro produto, Quantidade:
+				$tab3 = '<p class=" prod1" > terceiro produto, Quantidade:
 				<Select name="qntd2">
 					<option value="0"></option>
 					<option value="1">1</option>
@@ -232,8 +232,7 @@ $linha3 =1;
 		 $(".navigation").toggleClass('navigation-open');
 	   });
 	 });
-	
-			   
+	 
 		</script>
 </body>
 

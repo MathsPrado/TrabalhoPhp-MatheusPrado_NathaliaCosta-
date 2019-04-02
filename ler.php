@@ -64,12 +64,7 @@ $desconto = 0;
 	}else{
 		$check1="";
 	}
-	if (isset($_POST['check3'])){
-		$check2=$_POST['check3'];
 
-	}else{
-		$check2="";
-	}
 	if (isset($_POST['cidade'])){
 		$cidade=$_POST['cidade'];
 	}else {
@@ -114,22 +109,23 @@ $desconto = 0;
 	$descontoTo = number_format(($descontoTo), 2);
 
 	$valorTotal = $valorT - $descontoTo;
+	$valorTotal = number_format(($valorTotal), 2);
 
-	$cd = 'Nome:' . $nome .  " Jundiai " . $dia . " de " . $mes . " de " . $ano;
+	$cd = '   Nome: ' . $nome .  "  Jundiai " . $dia . " de " . $mes . " de " . $ano;
 
 	if($qtd1>0){
 	
-		$cd .= ' , produto:' . $produto1 .',\n valor total do produto:  R$'. $valorP1 . "Quantidade: ". $qtd1 ;
+		$cd .= ' ,  produto: ' . $produto1 .', valor total do produto: R$'. $valorP1 . " Quantidade: ". $qtd1 ;
 	}
 
 	if($qtd2>0){
-		$cd .=  ', produto:'. $produto2 .', valor total do produto:  R$'. $valorP2  ;
+		$cd .=  ',  produto:'. $produto2 .', valor total do produto: R$'. $valorP2  ;
 	}
 	if($qtd3>0){
-		$cd .=  ', produto:'. $produto3 .', valor total do produto:  R$'. $valorP3  ;
+		$cd .=  ',  produto:'. $produto3 .', valor total do produto: R$'. $valorP3  ;
 	}
 
-	 $cd .= 'Valor de desconto:  R$' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
+	 $cd .= ',  Valor de desconto: R$' . $descontoTo  .', Valor total do orçamento: R$'. $valorTotal .', Prazo do Orçamento: :' .$datatxt  ;
 
 	$fp = fopen("Orçamento"."_". $nome . "_" . $dataat . ".txt", "a");
 
@@ -204,8 +200,7 @@ $desconto = 0;
 		<p>Sobrenome: <?php echo $sobrenome; ?></p>
 	<p>Sexo: <?php echo $sexo; ?></p>
 
-		<p> Forma de pagamento: <?php echo $check1; ?></p>
-		<p> Forma de pagamento: <?php echo $check2; ?></p>
+		<p> Desconto de pagamento: <?php echo $check1; ?></p>
 		<p>Cidade: <?php echo $cidade; ?></p>
 		<p>Data de nascimento: <?php echo $datanascimento; ?></p>
 		<p>Comentário: <?php echo $come; ?></p>

@@ -176,7 +176,7 @@ $linha3 =1;
 			if($linha3 ==1 ){ 
 	
 				$tab3 = '<p class=" prod1" > terceiro produto, Quantidade:
-				<Select name="qntd">
+				<Select name="qntd2">
 					<option value="0"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -206,9 +206,7 @@ $linha3 =1;
 					<p>
 						<input type="reset" name="resetar" value="Limpar" />
 					</p>
-					<p>
-						<input type="button" name="botao" value="BOTÃO" />
-					</p>
+			
 				</form>
 			
                 <h4 style=" padding-left: 237px;">Após a confirmação do cadasto será salvo um arquivo txt</h4>

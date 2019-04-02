@@ -1,7 +1,4 @@
 <?php
-(double)$qtd1 = 0;
-(double) $qtd2 = 0;
-(double) $qtd3 = 0;
 
 
 
@@ -11,7 +8,6 @@ $mes= date("M");
 $dia =date("d");
 
 $ano =date("Y");
- $dataDia = date('d-m-Y ');
 
  $datatxt = date('d-m-Y', strtotime('+1 week'));
 
@@ -112,7 +108,7 @@ $desconto = 0;
 	$valorP3= $produto3 * (double)$qtd3;
 	$valorP3 = number_format(($valorP3), 2);
 
-	$valorT= (double)$valorP3 + (double)$valorP2 + (double)$valorP1;
+	$valorT= $valorP3 + $valorP2 + $valorP1;
 	$descontoTo = $desconto * $valorT; 
 	$descontoTo = number_format(($descontoTo), 2);
 
@@ -121,7 +117,7 @@ $desconto = 0;
 	$cd = 'Nome:' . $nome .  " Jundiai " . $dia . " de " . $mes . " de " . $ano;
 
 	if($qtd1>0){
-		echo ("<script> alert('AE KARAI'); </script> ");
+	
 		$cd .= ' , produto:' . $produto1 .',\n valor total do produto:  R$'. $valorP1 . "Quantidade: ". $qtd1 ;
 	}
 
@@ -134,7 +130,7 @@ $desconto = 0;
 
 	 $cd .= 'Valor de desconto:  R$' . $descontoTo  .', Prazo do Orçamento: :' .$datatxt ;
 
-	$fp = fopen("Orçamento_". $nome ."_" . $dataDia .".txt", "a");
+	$fp = fopen("Orçamento.txt", "a");
 
 	$escreve = fwrite ( $fp , $cd); 
 
